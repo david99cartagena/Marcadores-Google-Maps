@@ -1,28 +1,109 @@
-# Mapas
+# 🗺️ Mapas App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+Aplicación en **Angular 16** que utiliza **@angular/google-maps** y **Angular Material** para gestionar **marcadores interactivos en Google Maps**.
 
-## Development server
+Los usuarios pueden **agregar, editar y eliminar marcadores** directamente en el mapa, además de personalizarlos con título y descripción.  
+Toda la información se guarda en **LocalStorage**, por lo que los cambios persisten al recargar la página.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 📸 Demo
 
-## Code scaffolding
+🔗 **Visita la demo en línea:** [Mapas App en Netlify](https://stately-pony-c27e00.netlify.app/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Inicio General**
+  ![Mapas App Screenshot](https://raw.githubusercontent.com/david99cartagena/Marcadores-Google-Maps/refs/heads/main/media/Screenshot_1.png)
+- **Agregar Marcador en el mapa**
+  ![Mapas App Screenshot](https://raw.githubusercontent.com/david99cartagena/Marcadores-Google-Maps/refs/heads/main/media/Screenshot_2.png)
+- **Editar información del marcador (título y descripción)**
+  ![Mapas App Screenshot](https://raw.githubusercontent.com/david99cartagena/Marcadores-Google-Maps/refs/heads/main/media/Screenshot_3.png)
+- **Persistencia con LocalStorage**
+  ![Mapas App Screenshot](https://raw.githubusercontent.com/david99cartagena/Marcadores-Google-Maps/refs/heads/main/media/Screenshot_4.png)
 
-## Build
+## 🚀 Tecnologías Utilizadas
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Angular 16**
+- **@angular/google-maps**
+- **Angular Material**
+- **RxJS / TypeScript**
+- **LocalStorage**
+- **HTML5 / CSS3**
 
-## Running unit tests
+## 📁 Estructura del Proyecto
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+src/
+├── app/
+│   ├── classes/
+│   │   └── marcador.classes.ts      # Clase Marcador (lat, lng, titulo, desc)
+│   ├── components/
+│   │   └── mapa/
+│   │       ├── mapa.component.ts    # Componente principal del mapa
+│   │       ├── mapa.component.html
+│   │       ├── mapa.component.css
+│   │       ├── mapa-editar.component.ts # Diálogo de edición
+│   │       ├── mapa-editar.component.html
+│   │       └── mapa-editar.component.css
+│   ├── material.module.ts           # Angular Material centralizado
+│   ├── app.module.ts                # Módulo raíz
+│   ├── app-routing.module.ts        # Rutas
+│   └── app.component.*              # Componente raíz
+├── assets/                          # Recursos estáticos
+├── environments/                    # Configuración de entornos
+└── index.html
+```
 
-## Running end-to-end tests
+## 🔑 Funcionalidades
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+✅ Visualización de mapa con **Google Maps API**  
+✅ Agregar marcadores con click en el mapa  
+✅ Editar marcadores (título y descripción) con **MatDialog**  
+✅ Eliminar marcadores existentes  
+✅ Notificaciones con **MatSnackBar**  
+✅ Persistencia de marcadores en **LocalStorage**  
+✅ UI con **Angular Material**
 
-## Further help
+## 📦 Instalación
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-"# Marcadores-Google-Maps" 
+1. Clona este repositorio:
+
+```bash
+git clone https://github.com/david99cartagena/Marcadores-Google-Maps.git
+```
+
+```bash
+cd Marcadores-Google-Maps
+```
+
+2. Instala las dependencias:
+
+```bash
+npm install
+```
+
+3. Ejecuta el servidor local:
+
+```bash
+npm start
+```
+
+```bash
+ng serve
+```
+
+La aplicación estará disponible en: `http://localhost:4200/`
+
+## ⚙️ Configuración de API
+
+Asegúrate de tener una clave de **Google Maps API** activa.
+
+- Activa la API desde [Google Cloud Console](https://console.cloud.google.com/)
+
+- Crea un archivo `environment.ts` y agrega tu **API Key** si no está ya configurada.
+
+```ts
+export const environment = {
+  production: false,
+  googleMapsApiKey: "TU_API_KEY_AQUI",
+};
+```
+
+Basado en el curso de **Fernando Herrera** – [Angular: De Cero a Experto (Edición 2018)](https://www.udemy.com/course/angular-2-fernando-herrera/)
