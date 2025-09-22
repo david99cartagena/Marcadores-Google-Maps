@@ -2,7 +2,8 @@
 
 Aplicación en **Angular 16** que utiliza **@angular/google-maps** y **Angular Material** para gestionar **marcadores interactivos en Google Maps**.
 
-Los usuarios pueden **agregar, editar y eliminar marcadores** directamente en el mapa, además de personalizarlos con título y descripción.  
+Los usuarios pueden **agregar, editar y eliminar marcadores** directamente en el mapa, además de personalizarlos con título y descripción.
+
 Toda la información se guarda en **LocalStorage**, por lo que los cambios persisten al recargar la página.
 
 ## 📸 Demo
