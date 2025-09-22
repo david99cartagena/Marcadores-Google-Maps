@@ -1,0 +1,17 @@
+google-map {
+  display: block;
+  height: 520px;
+  width: 100%;
+}
+
+.info-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+mat-card {
+  margin: 16px;
+  padding: 12px;
+}

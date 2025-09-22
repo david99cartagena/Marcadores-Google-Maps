@@ -1,0 +1,20 @@
+<form [formGroup]="formulario" class="editar-form">
+  <mat-form-field appearance="outline">
+    <mat-label>Título</mat-label>
+    <input matInput formControlName="titulo" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Descripción</mat-label>
+    <textarea matInput rows="3" formControlName="desc"></textarea>
+  </mat-form-field>
+
+  <mat-dialog-actions>
+    <button (click)="guardarCambios()" mat-raised-button color="primary">
+      Guardar
+    </button>
+    <button (click)="onNoClick()" type="button" mat-raised-button color="warn">
+      Cancelar
+    </button>
+  </mat-dialog-actions>
+</form>

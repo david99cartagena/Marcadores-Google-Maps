@@ -1,0 +1,23 @@
+.editar-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* más espacio entre campos */
+  align-items: center; /* centra los campos */
+  padding: 16px; /* espacio interior */
+}
+
+.editar-form mat-form-field {
+  width: 100%; /* que ocupen todo el ancho disponible */
+  max-width: 400px; /* límite para que no se vean gigantes */
+}
+
+mat-dialog-actions {
+  display: flex;
+  justify-content: center; /* centra los botones */
+  margin-top: 16px;
+  gap: 8px; /* espacio entre botones */
+}
+
+mat-label {
+  font-weight: 600; /* que se vean más los títulos */
+}
